@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +8,13 @@
     <script src="./vue.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div id="app">
-        {{ mensagem }}<br>
-        Valor total: {{ valorTotal }}<br>
-        Logado: {{ logado }}<br>
-        Hobbie: {{ hobbies[3] }}<br>
-        Perfil: {{ perfil.site }}, {{ perfil.cursos[0].nome }}
+        <a v-bind:href="site">Site</a>
+        <p>Entendendo a tiretiva V-bind</p>
+        <input type="text">
+        <input type="checkbox">
     </div>
 
     <script>
@@ -22,33 +22,12 @@
         const vm = new Vue({
             el: '#app',
             data: {
-                mensagem: 'Primeiro template controlado pelo Vue', //string
-                valorTotal: 150.47, //número
-                logado: false, //booleano
-                hobbies: [
-                    'Dormir',
-                    'Colecionar vídeo games antigos',
-                    'Correr',
-                    'Trilhas'
-                ],
-                perfil: {
-                    nome: 'Juan Archangelo',
-                    site: 'juanarchangelo.net.br',
-                    idade: 26,
-                    cursos: [
-                        { 
-                            nome: 'Laravel', 
-                            cargaHoraria: '50 horas' 
-                        },
-                        { 
-                            nome: 'Bancos de Dados Relacionais', 
-                            cargaHoraria: '40 horas'
-                        }
-                    ]
-                }
-            }
+                site: 'https://juanarchangelo.com.br'
+            },
+            methods: {}
         })
 
     </script>
 </body>
+
 </html>
